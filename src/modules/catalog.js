@@ -8,7 +8,7 @@ const catalog = () => {
 	const catalogModal = document.querySelector('.catalog')
 	const catalogModalItems = document.querySelectorAll('.catalog  li')
 
-
+	// скрываем вкладку каталог после открытия по повторному клику
 	let isOpen = false
 
 	btnCatalog.addEventListener('click', () => {

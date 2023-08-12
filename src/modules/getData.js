@@ -2,17 +2,18 @@ import Notify from 'simple-notify'
 
 const getData = (str) => {
 
-	return fetch('https://test-af218-default-rtdb.firebaseio.com/goods.json')
+	// return fetch(`https://myozone-75ea9-default-rtdb.firebaseio.com/goods.json?${str ? `search${str}` : ''}`)
+	return fetch(`https://myozone-75ea9-default-rtdb.firebaseio.com/goods.json`)
 		.then((response) => {
-		
-			if(response.ok){
+
+			if (response.ok) {
 				return response.json()
 			} else {
-			throw new Error('Ошибка выполнения запроса к БД!')
+				throw new Error('Ошибка выполнения запроса к БД!')
 			}
 		})
 		.catch(error => {
-				new Notify({
+			new Notify({
 				status: 'error',
 				title: 'Ошибка!',
 				text: error.message,

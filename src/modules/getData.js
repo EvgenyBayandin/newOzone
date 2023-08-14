@@ -2,7 +2,8 @@ import Notify from 'simple-notify'
 
 const getData = (str) => {
 
-	// return fetch(`https://myozone-75ea9-default-rtdb.firebaseio.com/goods.json?${str ? `search${str}` : ''}`)
+	//проверяем "есть ли?" параметр в запросе и добавляем его, иначе не добавляем  
+	//return fetch(`https://myozone-75ea9-default-rtdb.firebaseio.com/goods.json?${str ? `search${str}` : ''}`)
 	return fetch(`https://myozone-75ea9-default-rtdb.firebaseio.com/goods.json`)
 		.then((response) => {
 

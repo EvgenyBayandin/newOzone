@@ -6,7 +6,7 @@ const catalog = () => {
 
 	const btnCatalog = document.querySelector('.catalog-button > button')
 	const catalogModal = document.querySelector('.catalog')
-	const catalogModalItems = document.querySelectorAll('.catalog  li')
+	const catalogModalItems = document.querySelectorAll('.catalog li')
 
 	// скрываем вкладку каталог после открытия по повторному клику
 	let isOpen = false
